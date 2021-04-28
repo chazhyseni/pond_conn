@@ -1,5 +1,3 @@
-Coming Soon...
-R code for the paper: 
 
 # The Importance of Blue and Green Landscape Connectivity for Biodiversity in Urban Ponds
 - The model:
