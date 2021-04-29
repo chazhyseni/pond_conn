@@ -11,7 +11,8 @@
   - Determining the relationship between connectivity and the biological diversity across pond communities, and how this relationship may vary based on pond class
 
 
-Run all of the code: 
+
+To run the R scripts:
 
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Input.R");
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/LandCover_250mRadius.R");
