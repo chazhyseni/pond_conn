@@ -1,6 +1,3 @@
-if (!require("rstatix")) install.packages("rstatix")
-if (!require("tibble")) install.packages("tibble")
-if (!require("tidyverse")) install.packages("tidyverse")
 
 
 
