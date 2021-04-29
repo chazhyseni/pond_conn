@@ -1,5 +1,6 @@
 
-
+detach("package:raster", unload = TRUE)
+detach("package:rasterVis", unload = TRUE)
 
 grp = seq(1,72)
 

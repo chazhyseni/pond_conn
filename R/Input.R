@@ -1,6 +1,6 @@
 if (!require("rstatix")) install.packages("rstatix")
 if (!require("tibble")) install.packages("tibble")
-if (!require("tidyverse")) install.packages("tidyverse", mask.ok=F)
+if (!require("tidyverse")) install.packages("tidyverse")
 
 if (!require("ade4")) install.packages("ade4")
 if (!require("betapart")) install.packages("betapart")
