@@ -2,7 +2,6 @@
 ####Maps####
 
 library(raster)
-library(rasterVis)
 
 #setwd("~/Data")
 lc17 <- raster(paste0(data,"S2GLC_Europe_2017_10m_Stkhlm.tif"))
