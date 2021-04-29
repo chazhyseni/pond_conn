@@ -1,9 +1,6 @@
 ####RUN AFTER Input.R#####
 
 ####Force-Directed Graph####
-#pdf('FDgraph_SppDist.pdf', width=10, height=10)
-qgraph(dist.abund.spp, groups=as.factor(envclust), color=col2.envclust[envclust], legend=F, labels=F, layout="spring", vsize=3, title="Community Dissimilarity w/ Env. Clusters")
-#dev.off()
 #pdf('FDgraph_blDist.pdf', width=10, height=10)
 qgraph(blDist, groups=as.factor(envclust), color=col2.envclust[envclust], legend=F, labels=F, layout="spring", vsize=3, title="Blue Resistance w/ Env. Clusters")
 #dev.off()
@@ -14,9 +11,6 @@ qgraph(grDist, groups=as.factor(envclust), color=col2.envclust[envclust], legend
 qgraph(blgrDist, groups=as.factor(envclust), color=col2.envclust[envclust], legend=F, labels=F, layout="spring", vsize=3, title="Blue+Green Resistance w/ Env. Clusters")
 #dev.off()
 
-#pdf('FDgraph_SppSim.pdf', width=10, height=10)
-qgraph(1/dist.abund.spp, groups=as.factor(envclust), color=col2.envclust[envclust], legend=F, labels=F, layout="spring", vsize=3, title="Community Similarity w/ Env. Clusters")
-#dev.off()
 #pdf('FDgraph_blConn.pdf', width=10, height=10)
 qgraph(1/blDist, groups=as.factor(envclust), color=col2.envclust[envclust], legend=F, labels=F, layout="spring", vsize=3, title="Blue Connectivity w/ Env. Clusters")
 #dev.off()
