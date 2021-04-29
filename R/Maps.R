@@ -1,6 +1,7 @@
 
 ####Maps####
 
+detach("package:tidyverse")
 library(raster)
 
 #setwd("~/Data")
