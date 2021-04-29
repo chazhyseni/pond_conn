@@ -1,5 +1,7 @@
 ####RUN AFTER Input.R#####
 
+par(mfrow=c(2,2),fg="gray50",pty='m',bty='o',mar=c(4,4,4,0.8),cex.main=1.3,cex.axis=1.1,cex.lab=1.2)
+
 ####Force-Directed Graph####
 #pdf('FDgraph_blDist.pdf', width=10, height=10)
 qgraph(blDist, groups=as.factor(envclust), color=col2.envclust[envclust], legend=F, labels=F, layout="spring", vsize=3, title="Blue Resistance w/ Env. Clusters")
