@@ -18,5 +18,5 @@ source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/LandCove
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Connectivity.R");
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/dbRDA.R");
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Diversity_Differentiation.R");
-source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Connectivity_Diversity.R");
+source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Connectivity_Biodiversity.R");
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Maps.R")
