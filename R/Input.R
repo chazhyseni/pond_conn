@@ -25,7 +25,7 @@ data <- "https://github.com/chazhyseni/pond_conn/blob/main/Data/"
 output <- "https://github.com/chazhyseni/pond_conn/blob/main/Output/"
 
 ####coordinates#### 
-xy <- read.csv("Coordinates.csv",header=T)
+xy <- read.csv(paste0(data,"Coordinates.csv"),header=T)
 names(xy) <- c('x','y')
 coordinates(xy) <- ~ x + y
 proj4string(xy) <- "+init=epsg:4326"
