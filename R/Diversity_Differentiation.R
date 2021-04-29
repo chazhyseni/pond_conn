@@ -1,8 +1,8 @@
 ####RUN AFTER Input.R#####
 
 
-####Fst in Community Ecology#####
 
+####Fst in Community Ecology#####
 
 ##Fst Spp##
 
@@ -125,8 +125,6 @@ div.k
 
 
 #beta div - turnover and nestedness
-library(betapart)
-
 bprt.grs <- beta.multi.abund(betapart.core.abund(abund.spp[which(envclust==1),]),index.family="bray")
 bprt.art <- beta.multi.abund(betapart.core.abund(abund.spp[which(envclust==2),]),index.family="bray")
 bprt.for <- beta.multi.abund(betapart.core.abund(abund.spp[which(envclust==3),]),index.family="bray")

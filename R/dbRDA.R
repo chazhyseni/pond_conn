@@ -264,7 +264,6 @@ dbrda.blgrenvCgeo<-capscale(dist.abund.spp~.+Condition(Geo),data=blgrenvCgeo.df,
 mod.rn = rownames(dbrda.blgrenvCgeo$CCA$v)
 mod.rn[which(rowSums(abs(dbrda.blgrenvCgeo$CCA$v[,1:2]))<0.26)]=rep("",length(mod.rn[which(rowSums(abs(dbrda.blgrenvCgeo$CCA$v[,1:2]))<0.26)]))
 
-library(Hotelling)
 hotT2env.blgrenvCgeo.12 <- hotelling.test(scores(dbrda.blgrenvCgeo)$sites~envclust,pair=c(1,2), perm=T, B=10000)
 hotT2env.blgrenvCgeo.13 <- hotelling.test(scores(dbrda.blgrenvCgeo)$sites~envclust,pair=c(1,3), perm=T, B=10000)
 hotT2env.blgrenvCgeo.23 <- hotelling.test(scores(dbrda.blgrenvCgeo)$sites~envclust,pair=c(2,3), perm=T, B=10000)

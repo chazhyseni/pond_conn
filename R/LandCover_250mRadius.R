@@ -1,9 +1,7 @@
-library(raster)
-library(rgdal)
 
-setwd("~/Data")
+#setwd("~/Data")
 
-xy = read.csv("Coordinates.csv",header=T)
+xy = read.csv(paste0(data,"Coordinates.csv"),header=T)
 names(xy) = c('x','y')
 coordinates(xy) <- ~ x + y
 proj4string(xy) <- "+init=epsg:4326"

@@ -1,12 +1,6 @@
 
 
-library(ggplot2)
-library(ggthemes)
-library(tidyverse)
-library(rstatix)
-library(ggpubr)
 
-library(usedist)
 grp = seq(1,72)
 
 comm.dist.all = dist_groups(dist.abund.spp,seq(1,72))

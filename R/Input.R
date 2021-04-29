@@ -1,16 +1,28 @@
-library(raster)
-library(rasterVis)
-library(PopGenReport)
-library(vegan)
-library(vegan3d)
-library(ecodist)
-library(ade4)
-library(maps)
-library(prettymapr)
+if (!require("ade4")) install.packages("ade4")
+if (!require("betapart")) install.packages("betapart")
+if (!require("ecodist")) install.packages("ecodist")
+if (!require("ggplot2")) install.packages("ggplot2")
+if (!require("ggpubr")) install.packages("ggpubr")
+if (!require("ggthemes")) install.packages("ggthemes")
+if (!require("Hotelling")) install.packages("Hotelling")
+if (!require("maps")) install.packages("maps")
+if (!require("PopGenReport")) install.packages("PopGenReport")
+if (!require("prettymapr")) install.packages("prettymapr")
+if (!require("qgraph")) install.packages("qgraph")
+if (!require("raster")) install.packages("raster")
+if (!require("rasterVis")) install.packages("rasterVis")
+if (!require("rgdal")) install.packages("rgdal")
+if (!require("rstatix")) install.packages("rstatix")
+if (!require("usedist")) install.packages("usedist")
+if (!require("vegan")) install.packages("vegan")
+if (!require("vegan3d")) install.packages("vegan3d")
+
 
 set.seed(27319562)
 
-setwd("~/Data")
+#setwd("~/Data")
+data <- "https://github.com/chazhyseni/pond_conn/tree/main/Data/"
+output <- "https://github.com/chazhyseni/pond_conn/tree/main/Output/"
 
 ####coordinates#### 
 xy <- read.csv("Coordinates.csv",header=T)
@@ -20,10 +32,10 @@ proj4string(xy) <- "+init=epsg:4326"
 coords <- xy
 
 ####envtl.data#### 
-env <- read.csv("EnvData.csv",header=T)
+env <- read.csv(paste0(data,"EnvData.csv"),header=T)
 
 ####abundance#### 
-abund.spp <- read.csv("SpeciesData.csv",header=T)
+abund.spp <- read.csv(paste0(data,"SpeciesData.csv"),header=T)
 
 ####richness#### 
 rich.spp <- abund.spp
@@ -59,11 +71,11 @@ dist.abund.spp <- (dist.abund.spp-min(dist.abund.spp))/(max(dist.abund.spp)-min(
 #dist.abund.spp <- log(dist.abund.spp+1)
 
 
-setwd("~/Output")
+#setwd("~/Output")
 
-bl <- read.table("ResistanceDistance_Blue.txt",header=T,row.names=1)
-gr <- read.table("ResistanceDistance_Green.txt",header=T,row.names=1)
-blgr <- read.table("ResistanceDistance_BlueGreen.txt",header=T,row.names=1)
+bl <- read.table(paste0(output,"ResistanceDistance_Blue.txt"),header=T,row.names=1)
+gr <- read.table(paste0(output,"ResistanceDistance_Green.txt"),header=T,row.names=1)
+blgr <- read.table(paste0(output,"ResistanceDistance_BlueGreen.txt"),header=T,row.names=1)
 blDist <- as.dist(as.matrix(bl))
 grDist <- as.dist(as.matrix(gr))
 blgrDist <- as.dist(as.matrix(blgr))
