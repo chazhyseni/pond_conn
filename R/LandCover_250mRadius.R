@@ -1,13 +1,7 @@
 
 #setwd("~/Data")
 
-xy = read.csv(paste0(data,"Coordinates.csv"),header=T)
-names(xy) = c('x','y')
-coordinates(xy) <- ~ x + y
-proj4string(xy) <- "+init=epsg:4326"
-
-lc17 = raster("S2GLC_Europe_2017_10m_Stkhlm.tif")
-
+lc17 = raster(paste0(data,"S2GLC_Europe_2017_10m_Stkhlm.tif"))
 
 ## create 250-m buffer
 xy_laea = spTransform(xy, proj4string(lc17))
