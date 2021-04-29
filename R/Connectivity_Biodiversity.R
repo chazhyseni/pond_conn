@@ -96,13 +96,16 @@ stat.test %>% select(-.y., -statistic, -df)
 
 par(mfrow=c(1,1),fg="gray50",pty='m',bty='o',mar=c(4.5,4.5,4.5,1),cex.main=1.3,cex.axis=1.1,cex.lab=1.2)
 
-(conn.plot <- ggboxplot(
+conn.plot <- ggboxplot(
   conn.long, x = "Class", y = "value",
   fill = "Class", palette = col2.envclust, legend = "none",
   ggtheme = theme_pubr(border = FALSE)
-  )
-  + facet_wrap(~variables)
-  + labs(title = "", x = "Pond Class", y = "Mean Connectivity", color = "Pond Class\n"))
+  ) 
+
+conn.plot + 
+facet_wrap(~variables) + 
+labs(title = "", x = "Pond Class", y = "Mean Connectivity", color = "Pond Class\n")
+
 stat.test <- stat.test %>% add_xy_position(x = "Class")
 conn.plot + stat_pvalue_manual(stat.test, label = "p.adj.signif")
 
