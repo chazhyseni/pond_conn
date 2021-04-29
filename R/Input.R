@@ -21,8 +21,8 @@ if (!require("vegan3d")) install.packages("vegan3d")
 set.seed(27319562)
 
 #setwd("~/Data")
-data <- "https://github.com/chazhyseni/pond_conn/tree/main/Data/"
-output <- "https://github.com/chazhyseni/pond_conn/tree/main/Output/"
+data <- "https://github.com/chazhyseni/pond_conn/blob/main/Data/"
+output <- "https://github.com/chazhyseni/pond_conn/blob/main/Output/"
 
 ####coordinates#### 
 xy <- read.csv("Coordinates.csv",header=T)

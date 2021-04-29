@@ -2,8 +2,8 @@
 ####Maps####
 
 
-setwd("~/Data")
-lc17 <- raster("S2GLC_Europe_2017_10m_Stkhlm.tif")
+#setwd("~/Data")
+lc17 <- raster(paste0(data,"S2GLC_Europe_2017_10m_Stkhlm.tif"))
 lc17_latlon <- projectRaster(lc17, crs="+init=epsg:4326", method="ngb")
 
 
@@ -53,13 +53,16 @@ points(xy,bg="white",pch=21,cex=2.2,lwd=2.5,col="gray40")
 cols <- colorRampPalette(c('darkred','salmon1','goldenrod1','green4','steelblue','plum2','gray95'))
 heatcols <- colorRampPalette(c('darkred','red3','red1','gray95'))
 
-setwd("~/Output")
-curr.dens <- stack()
-for(i in 1:3) curr.dens <- addLayer(curr.dens, raster(list.files(pattern="*.asc")[i]))
+res.names <- c("ResistanceSurface_Blue.asc","ResistanceSurface_BlueGreen.asc","ResistanceSurface_Green.asc")
+curr.names <- c("CurrentDensity_Blue.asc","CurrentDensity_BlueGreen.asc","CurrentDensity_Green.asc")
 
-setwd("~/Data")
+#setwd("~/Output")
+curr.dens <- stack()
+for(i in 1:3) curr.dens <- addLayer(curr.dens, raster(paste0(output,curr.names[i])))
+
+#setwd("~/Data")
 res.surf <- stack()
-for(i in 1:3) res.surf <- addLayer(res.surf, raster(list.files(pattern="*.asc")[i]))
+for(i in 1:3) res.surf <- addLayer(res.surf, raster(paste0(data,res.names[i])))
 
 proj4string(curr.dens) = proj4string(res.surf) <- "+init=epsg:3035"
 curr.dens <- projectRaster(curr.dens, crs="+init=epsg:4326", method="ngb")
