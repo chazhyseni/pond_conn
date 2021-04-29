@@ -13,10 +13,10 @@
 
 Run all of the code: 
 
-source("https://github.com/chazhyseni/pond_conn/tree/main/R/Input.R")
-source("https://github.com/chazhyseni/pond_conn/tree/main/R/LandCover_250mRadius.R")
-source("https://github.com/chazhyseni/pond_conn/tree/main/R/Connectivity.R")
-source("https://github.com/chazhyseni/pond_conn/tree/main/R/dbRDA.R")
-source("https://github.com/chazhyseni/pond_conn/tree/main/R/Diversity_Differentiation.R")
-source("https://github.com/chazhyseni/pond_conn/tree/main/R/Connectivity_Diversity.R")
-source("https://github.com/chazhyseni/pond_conn/tree/main/R/Maps.R")
+source("https://github.com/chazhyseni/pond_conn/blob/main/R/Input.R")
+source("https://github.com/chazhyseni/pond_conn/blob/main/R/LandCover_250mRadius.R")
+source("https://github.com/chazhyseni/pond_conn/blob/main/R/Connectivity.R")
+source("https://github.com/chazhyseni/pond_conn/blob/main/R/dbRDA.R")
+source("https://github.com/chazhyseni/pond_conn/blob/main/R/Diversity_Differentiation.R")
+source("https://github.com/chazhyseni/pond_conn/blob/main/R/Connectivity_Diversity.R")
+source("https://github.com/chazhyseni/pond_conn/blob/main/R/Maps.R")
