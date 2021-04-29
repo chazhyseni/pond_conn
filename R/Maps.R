@@ -4,7 +4,7 @@
 library(raster)
 
 #setwd("~/Data")
-lc17 <- raster(paste0(data,"S2GLC_Europe_2017_10m_Stkhlm.tif"))
+#lc17 <- raster(paste0(data,"S2GLC_Europe_2017_10m_Stkhlm.tif"))
 lc17_latlon <- projectRaster(lc17, crs="+init=epsg:4326", method="ngb")
 
 
