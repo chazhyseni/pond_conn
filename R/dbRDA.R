@@ -18,7 +18,12 @@ an.geopcnm <- anova(dbrda.geopcnm,by="mar")
 i <- 0.25
 while(i > 0.05){
 	sig.geopcnm <- which(an.geopcnm$`Pr(>F)` < i)
-	Geo <- Geo[,sig.geopcnm]
+	if(length(sig.geopcnm) > 1){ 
+	  Geo <- Geo[,sig.geopcnm]
+	}
+	else{
+	  Geo <- Geo
+	}
 	Geo.df <- as.data.frame(Geo)
 	dbrda.geopcnm <- capscale(dist.abund.spp~.,data=Geo.df)
 	an.geopcnm <- anova(dbrda.geopcnm,by="mar")
