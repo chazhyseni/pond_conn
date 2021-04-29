@@ -1,4 +1,4 @@
-detach("package:raster", unload = TRUE, force = TRUE)
+detach("raster", unload = TRUE, force = TRUE)
 
 
 grp = seq(1,72)
