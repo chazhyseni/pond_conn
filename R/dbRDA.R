@@ -1,7 +1,7 @@
 ####RUN AFTER Input.R#####
 ####RUN AFTER Connectivity.R#####
 
-set.seed(27319562)
+set.seed(731956211)
 
 ####DBRDA####
 Geo <- scores(pcnm(pointdistgeo))
@@ -327,7 +327,7 @@ points(pl, bg=col2.envclust[envclust], pch=22, cex=1.5, lwd=2, col="gray40")
 #### DBRDA: CONDITIONED ON GEO #### 
 
 
-set.seed(37813)
+set.seed(4437813)
 
 dbrda.bl.env.Cgeo <- capscale(dist.abund.spp~.+Condition(Geo),data=cbind(env.sig.df,pco.bl.df))
 an.bl.env.Cgeo <- anova(dbrda.bl.env.Cgeo,by="mar")
@@ -551,7 +551,7 @@ lines(hull[[3]]/6.7,col=col2.envclust[3],lwd=1.5)
 #### DBRDA: CONDITIONED ON ENV+GEO #### 
 
 
-set.seed(23673418)
+set.seed(21673419)
 
 dbrda.bl.Cenvgeo <- capscale(dist.abund.spp~.+Condition(Geo,env.sig),data=pco.bl.df)
 an.bl.Cenvgeo <- anova(dbrda.bl.Cenvgeo,by="mar")
