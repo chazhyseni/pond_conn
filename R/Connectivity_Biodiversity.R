@@ -73,7 +73,7 @@ rownames(conn.class.mat) <- c("Bl.Avg", "Bl.Med", "Gr.Avg", "Gr.Med", "BlGr.Avg"
 conn.data <- cbind(bl.conn, gr.conn, blgr.conn, envclust)
 colnames(conn.data) <- c("Blue", "Green", "Blue+Green", "Class")
 
-conn.data <- as.tibble(conn.data)
+conn.data <- as_tibble(conn.data)
 
 conn.long <- conn.data %>%
   pivot_longer(-Class, names_to = "variables", values_to = "value")
