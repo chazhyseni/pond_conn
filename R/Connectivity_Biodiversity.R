@@ -175,76 +175,76 @@ gg.allenv[,"cluster"]<-gsub("3","Forest",gg.allenv[,"cluster"])
 
 
 
-(ggplot(gg.allenv, aes(S, blgr.conn, colour=factor(cluster)))
-    + geom_point(aes(size=0.9))
-    + stat_smooth(method='lm',formula=y~x,lwd=2)
-    + facet_wrap(~cluster)
-    + scale_color_manual(values = col2.envclust[c(2,3,1)])
-    + theme_clean(base_size=18)
-    + labs(title = "", x = "Species Richness", y = "Blue+Green Connectivity", color = "Pond Class\n"))
+ggplot(gg.allenv, aes(S, blgr.conn, colour=factor(cluster))) + 
+geom_point(aes(size=0.9)) + 
+stat_smooth(method='lm',formula=y~x,lwd=2) + 
+facet_wrap(~cluster) + 
+scale_color_manual(values = col2.envclust[c(2,3,1)]) + 
+theme_clean(base_size=18) + 
+labs(title = "", x = "Species Richness", y = "Blue+Green Connectivity", color = "Pond Class\n")
 
-(ggplot(gg.allenv[-which(J==Inf),], aes(J, blgr.conn, color=factor(cluster)))
-    + geom_point(aes(size=0.9))
-    + stat_smooth(method='lm',formula=y~x,lwd=2)
-    + facet_wrap(~cluster)
-    + scale_color_manual(values = col2.envclust[c(2,3,1)])
-    + theme_clean(base_size=18)
-    + labs(title = "", x = "Species Evenness", y = "Blue+Green Connectivity", color = "Pond Class\n"))
-
-
-
-(ggplot(gg.allenv, aes(blgr.conn, S, colour=factor(cluster)))
-    + geom_point(aes(size=0.9))
-    + stat_smooth(method='lm',formula=y~x,lwd=2)
-    + facet_wrap(~cluster)
-    + scale_color_manual(values = col2.envclust[c(2,3,1)])
-    + theme_clean(base_size=18)
-    + labs(title = "", y = "Species Richness", x = "Blue+Green Connectivity", color = "Pond Class\n"))
-
-(ggplot(gg.allenv[-which(J==Inf),], aes(blgr.conn, J, color=factor(cluster)))
-    + geom_point(aes(size=0.9))
-    + stat_smooth(method='lm',formula=y~x,lwd=2)
-    + facet_wrap(~cluster)
-    + scale_color_manual(values = col2.envclust[c(2,3,1)])
-    + theme_clean(base_size=18)
-    + labs(title = "", y = "Species Evenness", x = "Blue+Green Connectivity", color = "Pond Class\n"))
+ggplot(gg.allenv[-which(J==Inf),], aes(J, blgr.conn, color=factor(cluster))) + 
+geom_point(aes(size=0.9)) + 
+stat_smooth(method='lm',formula=y~x,lwd=2) + 
+facet_wrap(~cluster) + 
+scale_color_manual(values = col2.envclust[c(2,3,1)]) + 
+theme_clean(base_size=18) + 
+labs(title = "", x = "Species Evenness", y = "Blue+Green Connectivity", color = "Pond Class\n")
 
 
 
+ggplot(gg.allenv, aes(blgr.conn, S, colour=factor(cluster))) + 
+geom_point(aes(size=0.9)) + 
+stat_smooth(method='lm',formula=y~x,lwd=2) + 
+facet_wrap(~cluster) + 
+scale_color_manual(values = col2.envclust[c(2,3,1)]) + 
+theme_clean(base_size=18) + 
+labs(title = "", y = "Species Richness", x = "Blue+Green Connectivity", color = "Pond Class\n")
+
+ggplot(gg.allenv[-which(J==Inf),], aes(blgr.conn, J, color=factor(cluster))) + 
+geom_point(aes(size=0.9)) + 
+stat_smooth(method='lm',formula=y~x,lwd=2) + 
+facet_wrap(~cluster) + 
+scale_color_manual(values = col2.envclust[c(2,3,1)]) + 
+theme_clean(base_size=18) + 
+labs(title = "", y = "Species Evenness", x = "Blue+Green Connectivity", color = "Pond Class\n")
 
 
-(ggplot(gg.allenv, aes(S, bl.conn, colour=factor(cluster)))
-    + geom_point(aes(size=0.9))
-    + stat_smooth(method='lm',formula=y~x,lwd=2)
-    + facet_wrap(~cluster)
-    + scale_color_manual(values = col2.envclust[c(2,3,1)])
-    + theme_clean(base_size=18)
-    + labs(title = "", x = "Species Richness", y = "Blue Connectivity", color = "Pond Class\n"))
-
-(ggplot(gg.allenv[-which(J==Inf),], aes(J, bl.conn, color=factor(cluster)))
-    + geom_point(aes(size=0.9))
-    + stat_smooth(method='lm',formula=y~x,lwd=2)
-    + facet_wrap(~cluster)
-    + scale_color_manual(values = col2.envclust[c(2,3,1)])
-    + theme_clean(base_size=18)
-    + labs(title = "", x = "Species Evenness", y = "Blue Connectivity", color = "Pond Class\n"))
 
 
 
-(ggplot(gg.allenv, aes(bl.conn, S, colour=factor(cluster)))
-    + geom_point(aes(size=0.9))
-    + stat_smooth(method='lm',formula=y~x,lwd=2)
-    + facet_wrap(~cluster)
-    + scale_color_manual(values = col2.envclust[c(2,3,1)])
-    + theme_clean(base_size=18)
-    + labs(title = "", y = "Species Richness", x = "Blue Connectivity", color = "Pond Class\n"))
+ggplot(gg.allenv, aes(S, bl.conn, colour=factor(cluster))) + 
+geom_point(aes(size=0.9)) + 
+stat_smooth(method='lm',formula=y~x,lwd=2) + 
+facet_wrap(~cluster) + 
+scale_color_manual(values = col2.envclust[c(2,3,1)]) + 
+theme_clean(base_size=18) + 
+labs(title = "", x = "Species Richness", y = "Blue Connectivity", color = "Pond Class\n")
 
-(ggplot(gg.allenv[-which(J==Inf),], aes(bl.conn, J, color=factor(cluster)))
-    + geom_point(aes(size=0.9))
-    + stat_smooth(method='lm',formula=y~x,lwd=2)
-    + facet_wrap(~cluster)
-    + scale_color_manual(values = col2.envclust[c(2,3,1)])
-    + theme_clean(base_size=18)
-    + labs(title = "", y = "Species Evenness", x = "Blue Connectivity", color = "Pond Class\n"))
+ggplot(gg.allenv[-which(J==Inf),], aes(J, bl.conn, color=factor(cluster))) + 
+geom_point(aes(size=0.9)) + 
+stat_smooth(method='lm',formula=y~x,lwd=2) + 
+facet_wrap(~cluster) + 
+scale_color_manual(values = col2.envclust[c(2,3,1)]) + 
+theme_clean(base_size=18) + 
+labs(title = "", x = "Species Evenness", y = "Blue Connectivity", color = "Pond Class\n")
+
+
+
+ggplot(gg.allenv, aes(bl.conn, S, colour=factor(cluster))) + 
+geom_point(aes(size=0.9)) + 
+stat_smooth(method='lm',formula=y~x,lwd=2) + 
+facet_wrap(~cluster) + 
+scale_color_manual(values = col2.envclust[c(2,3,1)]) + 
+theme_clean(base_size=18) + 
+labs(title = "", y = "Species Richness", x = "Blue Connectivity", color = "Pond Class\n")
+
+ggplot(gg.allenv[-which(J==Inf),], aes(bl.conn, J, color=factor(cluster))) + 
+geom_point(aes(size=0.9)) + 
+stat_smooth(method='lm',formula=y~x,lwd=2) + 
+facet_wrap(~cluster) + 
+scale_color_manual(values = col2.envclust[c(2,3,1)]) + 
+theme_clean(base_size=18) + 
+labs(title = "", y = "Species Evenness", x = "Blue Connectivity", color = "Pond Class\n")
 
 
