@@ -171,7 +171,12 @@ envCblgrCgeo <- env.df
 i <- 0.25
 while(i > 0.05){
 	sig.envCblgrCgeo <- which(an.envCblgrCgeo$`Pr(>F)` < i)
-	if(length(sig.envCblgrCgeo) != 0) envCblgrCgeo <- envCblgrCgeo[,sig.envCblgrCgeo]
+	if(length(sig.envCblgrCgeo) > 1){ 
+	  envCblgrCgeo <- envCblgrCgeo[,sig.envCblgrCgeo]
+	}
+	else{
+	  envCblgrCgeo <- envCblgrCgeo
+	}
 	envCblgrCgeo.df <- as.data.frame(envCblgrCgeo)
 	dbrda.envCblgrCgeo <- capscale(dist.abund.spp~.+Condition(pco.blgrCgeo),data=envCblgrCgeo.df)
 	an.envCblgrCgeo <- anova(dbrda.envCblgrCgeo,by="mar")
@@ -185,7 +190,12 @@ envCgeo <- env.df
 i <- 0.25
 while(i > 0.05){
 	sig.envCgeo <- which(an.envCgeo$`Pr(>F)` < i)
-	if(length(sig.envCgeo) != 0) envCgeo <- envCgeo[,sig.envCgeo]
+	if(length(sig.envCgeo) > 1){ 
+	  envCgeo <- envCgeo[,sig.envCgeo]
+	}
+	else{
+	  envCgeo <- envCgeo
+	}
 	envCgeo.df <- as.data.frame(envCgeo)
 	dbrda.envCgeo <- capscale(dist.abund.spp~.+Condition(Geo),data=envCgeo.df)
 	an.envCgeo <- anova(dbrda.envCgeo,by="mar")
@@ -205,7 +215,12 @@ env.sig <- env.df
 i <- 0.25
 while(i > 0.05){
 	sig.env <- which(an.env$`Pr(>F)` < i)
-	if(length(sig.env) != 0) env.sig <- env.sig[,sig.env]
+	if(length(sig.env) > 1){ 
+	  env.sig <- env.sig[,sig.env]
+	}
+	else{
+	  env.sig <- env.sig
+	}
 	env.sig.df <- as.data.frame(env.sig)
 	dbrda.env <- capscale(dist.abund.spp~.,data=env.sig.df)
 	an.env <- anova(dbrda.env,by="mar")
