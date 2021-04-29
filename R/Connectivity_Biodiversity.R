@@ -1,5 +1,7 @@
 
-detach("package:raster", unload = TRUE)
+library(rstatix)
+library(tibble)
+library(tidyverse)
 
 grp = seq(1,72)
 
