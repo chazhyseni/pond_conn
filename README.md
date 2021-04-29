@@ -13,10 +13,10 @@
 
 Run all of the code: 
 
-source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Input.R")
-source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/LandCover_250mRadius.R")
-source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Connectivity.R")
-source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/dbRDA.R")
-source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Diversity_Differentiation.R")
-source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Connectivity_Diversity.R")
+source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Input.R");
+source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/LandCover_250mRadius.R");
+source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Connectivity.R");
+source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/dbRDA.R");
+source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Diversity_Differentiation.R");
+source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Connectivity_Diversity.R");
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Maps.R")
