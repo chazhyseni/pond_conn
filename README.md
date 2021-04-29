@@ -9,3 +9,14 @@
 - Species diversity and connectivity:
   - Classifying ponds based on local environmental characteristics and comparing differences in community composition and blue and green connectivity among pond classes
   - Determining the relationship between connectivity and the biological diversity across pond communities, and how this relationship may vary based on pond class
+
+
+Run all of the code: 
+
+source("https://github.com/chazhyseni/pond_conn/tree/main/R/Input.R")
+source("https://github.com/chazhyseni/pond_conn/tree/main/R/LandCover_250mRadius.R")
+source("https://github.com/chazhyseni/pond_conn/tree/main/R/Connectivity.R")
+source("https://github.com/chazhyseni/pond_conn/tree/main/R/dbRDA.R")
+source("https://github.com/chazhyseni/pond_conn/tree/main/R/Diversity_Differentiation.R")
+source("https://github.com/chazhyseni/pond_conn/tree/main/R/Connectivity_Diversity.R")
+source("https://github.com/chazhyseni/pond_conn/tree/main/R/Maps.R")
