@@ -90,7 +90,7 @@ par(mfrow=c(2,2),fg="gray50",pty='m',bty='o',mar=c(4,4,4,0.8),cex.main=1.3,cex.a
 for(i in 1:3){
     plot(res.surf[[i]]/max(na.omit(values(res.surf[[i]]))),col=rev(cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main=res.labs[i],xlab="Longitude",ylab=y.lab[i])
     addnortharrow("bottomright",scale=0.52,padin=c(0.25,0.15))
-    addscalebar(plotunit="km",plotepsg=4326,,label.cex=1)
+    addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 }
 
 
@@ -100,7 +100,7 @@ par(mfrow=c(1,1),fg="gray50",pty='m',bty='o',mar=c(4,4,4,4),cex.main=1.3,cex.axi
 blgrconn <- disaggregate(curr.dens[[2]], 10)
 plot(blgrconn/max(na.omit(values(blgrconn))),col=rev(heatcols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main=curr.labs[2],xlab="Longitude",ylab=y.lab[2])
 addnortharrow("bottomright",scale=0.62,padin=c(0.25,0.15))
-addscalebar(plotunit="km",plotepsg=4326,,label.cex=1)
+addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 points(xy, pch=21, col="black", bg=col2.envclust[envclust], cex=1.3)
 
 
@@ -116,19 +116,19 @@ par(mfrow=c(2,2),fg="gray50",pty='m',bty='o',mar=c(4.5,4.5,4.5,1),cex.main=1.3,c
 plot(blgrconn,col=rev(blgr.cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Blue+Green Connectivity",
      xlab="Longitude",ylab="Latitude")
 addnortharrow("bottomright",scale=0.58,padin=c(0.25,0.15))
-addscalebar(plotunit="km",plotepsg=4326,,label.cex=1)
+addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=blgr.conn)
 
 plot(blgrconn,col=rev(blgr.cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Species Richness",
      xlab="Longitude",ylab="")
 addnortharrow("bottomright",scale=0.58,padin=c(0.25,0.15))
-addscalebar(plotunit="km",plotepsg=4326,,label.cex=1)
+addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=S/10)
 
 plot(blgrconn,col=rev(blgr.cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Species Evenness",
      xlab="Longitude",ylab="Latitude")
 addnortharrow("bottomright",scale=0.58,padin=c(0.25,0.15))
-addscalebar(plotunit="km",plotepsg=4326,,label.cex=1)
+addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=J)
 
 
@@ -148,17 +148,17 @@ par(mfrow=c(2,2),fg="gray50",pty='m',bty='o',mar=c(4.5,4.5,4.5,1),cex.main=1.3,c
 plot(blconn,col=rev(bl.cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Current Density: Blue",
      xlab="Longitude",ylab="Latitude")
 addnortharrow("bottomright",scale=0.54,padin=c(0.25,0.15))
-addscalebar(plotunit="km",plotepsg=4326,,label.cex=1)
+addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 points(xy, pch=21, col="black", bg="white", cex=0.75)
 
 plot(grconn,col=rev(gr.cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Current Density: Green",
      xlab="Longitude",ylab="")
 addnortharrow("bottomright",scale=0.54,padin=c(0.25,0.15))
-addscalebar(plotunit="km",plotepsg=4326,,label.cex=1)
+addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 points(xy, pch=21, col="black", bg="white", cex=0.75)
 
 plot(blgrconn,col=rev(blgr.cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Current Density: Blue+Green",
      xlab="Longitude",ylab="Latitude")
 addnortharrow("bottomright",scale=0.54,padin=c(0.25,0.15))
-addscalebar(plotunit="km",plotepsg=4326,,label.cex=1)
+addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 points(xy, pch=21, col="black", bg="white", cex=0.75)
