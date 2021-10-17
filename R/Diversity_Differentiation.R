@@ -87,9 +87,9 @@ plot(b.disper)
 ## with data ellipses instead of hulls
 plot(b.disper, pch=16:18, col=col2.envclust, ellipse = TRUE, hull = FALSE, conf = 0.75) # 75% data ellipse
 
-H <- diversity(dist.abund.spp)
-simp <- diversity(dist.abund.spp, "simpson")
-invsimp <- diversity(dist.abund.spp, "inv")
+H <- diversity(abund.spp)
+simp <- diversity(abund.spp, "simpson")
+invsimp <- diversity(abund.spp, "inv")
 
 ## Species richness (S) and Pielou's evenness (J):
 S <- specnumber(abund.spp) ## rowSums(abund.spp > 0) does the same...
