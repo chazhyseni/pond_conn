@@ -145,7 +145,7 @@ points(xy, pch=21, col="black", bg="white", cex=0.75)
 par(mfrow=c(2,2),fg="gray50",pty='m',bty='o',mar=c(4.5,4.5,4.5,1),cex.main=1.3,cex.axis=1.1,cex.lab=1.2)
 
 plot(blgrconn,
-     col="white",
+     col="white", legend=F,
      #col=rev(blgr.cols(11)),
      xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Blue+Green Connectivity",
      xlab="Longitude",ylab="Latitude")
@@ -154,7 +154,7 @@ addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=blgr.conn)
 
 plot(blgrconn,
-     col="white",
+     col="white", legend=F,
      #col=rev(blgr.cols(11)),
      xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Species Richness",
      xlab="Longitude",ylab="")
@@ -163,7 +163,7 @@ addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=S/7)
 
 plot(blgrconn,
-     col="white",
+     col="white", legend=F,
      #col=rev(blgr.cols(11)),
      xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Species Evenness",
      xlab="Longitude",ylab="Latitude")
