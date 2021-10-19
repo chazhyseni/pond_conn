@@ -87,24 +87,34 @@ plot(b.disper)
 ## with data ellipses instead of hulls
 plot(b.disper, pch=16:18, col=col2.envclust, ellipse = TRUE, hull = FALSE, conf = 0.75) # 75% data ellipse
 
-H <- diversity(abund.spp)
-simp <- diversity(abund.spp, "simpson")
-invsimp <- diversity(abund.spp, "inv")
-
-## Species richness (S) and Pielou's evenness (J):
-S <- specnumber(abund.spp) ## rowSums(abund.spp > 0) does the same...
-J <- H/log(S)
 
 ## beta diversity defined as gamma/alpha - 1:
 alpha.env <- tapply(specnumber(abund.spp), envclust, mean)
 gamma.env <- specnumber(abund.spp, envclust)
 beta.env <- gamma.env/alpha.env - 1
 
-H.k.env <- tapply(H,as.factor(envclust),mean)
-simp.k.env <- tapply(simp,as.factor(envclust),mean)
-invsimp.k.env <- tapply(invsimp,as.factor(envclust),mean)
-S.k.env <- specnumber(abund.spp, envclust)
-J.k.env <- H.k.env/log(S.k.env)
+## Species richness (S)
+S <- specnumber(abund.spp) ## rowSums(abund.spp > 0) does the same...
+#S.k.env <- specnumber(abund.spp, envclust)
+S.k.env <- tapply(S, envclust, mean)
+
+## Shannon
+H <- diversity(abund.spp)
+H.k.env <- tapply(H, envclust, mean)
+
+## Simpson
+simp <- diversity(abund.spp, "simpson")
+simp.k.env <- tapply(simp, envclust, mean)
+
+## Inverse Simpson
+invsimp <- diversity(abund.spp, "inv")
+invsimp.k.env <- tapply(invsimp, envclust, mean)
+
+## Pielou's evenness (J):
+J <- H/log(specnumber(abund.spp))
+##S based on total number of species (gamma) per pond class, rather than site (alpha)
+#J.k.env <- H.k.env/log(S.k.env)
+J.k.env <-  tapply(H[-which(!is.finite(J))]/log(S[-which(!is.finite(J))]), envclust[-which(!is.finite(J))], mean)
 
 
 summary(lm(H[which(S != 1)] ~ TOC[which(S != 1)], data = as.data.frame(env)))

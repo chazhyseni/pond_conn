@@ -107,34 +107,6 @@ points(xy, pch=21, col="black", bg=col2.envclust[envclust], cex=1.3)
     
 
 
-
-blgr.cols <- colorRampPalette(c('dark blue','steelblue3','seagreen','gray90'))
-blgrconn <- blgrconn/max(na.omit(values(blgrconn)))
-
-par(mfrow=c(2,2),fg="gray50",pty='m',bty='o',mar=c(4.5,4.5,4.5,1),cex.main=1.3,cex.axis=1.1,cex.lab=1.2)
-
-plot(blgrconn,col=rev(blgr.cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Blue+Green Connectivity",
-     xlab="Longitude",ylab="Latitude")
-addnortharrow("bottomright",scale=0.58,padin=c(0.25,0.15))
-addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
-points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=blgr.conn)
-
-plot(blgrconn,col=rev(blgr.cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Species Richness",
-     xlab="Longitude",ylab="")
-addnortharrow("bottomright",scale=0.58,padin=c(0.25,0.15))
-addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
-points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=S/10)
-
-plot(blgrconn,col=rev(blgr.cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Species Evenness",
-     xlab="Longitude",ylab="Latitude")
-addnortharrow("bottomright",scale=0.58,padin=c(0.25,0.15))
-addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
-points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=J)
-
-
-
-
-
 bl.cols <- colorRampPalette(c('dark blue','steelblue3','gray90'))
 blconn <- disaggregate(curr.dens[[1]], 10)
 blconn <- blconn/max(na.omit(values(blconn)))
@@ -142,6 +114,11 @@ blconn <- blconn/max(na.omit(values(blconn)))
 gr.cols <- colorRampPalette(c('dark green','seagreen4','gray90'))
 grconn <- disaggregate(curr.dens[[3]], 10)
 grconn <- grconn/max(na.omit(values(grconn)))
+
+blgr.cols <- colorRampPalette(c('dark blue','steelblue3','seagreen','gray90'))
+blgrconn <- blgrconn/max(na.omit(values(blgrconn)))
+
+
 
 par(mfrow=c(2,2),fg="gray50",pty='m',bty='o',mar=c(4.5,4.5,4.5,1),cex.main=1.3,cex.axis=1.1,cex.lab=1.2)
 
@@ -162,3 +139,38 @@ plot(blgrconn,col=rev(blgr.cols(11)),xlim=c(17.66,18.52),ylim=c(59.1,59.5),main=
 addnortharrow("bottomright",scale=0.54,padin=c(0.25,0.15))
 addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
 points(xy, pch=21, col="black", bg="white", cex=0.75)
+
+
+
+par(mfrow=c(2,2),fg="gray50",pty='m',bty='o',mar=c(4.5,4.5,4.5,1),cex.main=1.3,cex.axis=1.1,cex.lab=1.2)
+
+plot(blgrconn,
+     col="white",
+     #col=rev(blgr.cols(11)),
+     xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Blue+Green Connectivity",
+     xlab="Longitude",ylab="Latitude")
+addnortharrow("bottomright",scale=0.58,padin=c(0.25,0.15))
+addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
+points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=blgr.conn)
+
+plot(blgrconn,
+     col="white",
+     #col=rev(blgr.cols(11)),
+     xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Species Richness",
+     xlab="Longitude",ylab="")
+addnortharrow("bottomright",scale=0.58,padin=c(0.25,0.15))
+addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
+points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=S/7)
+
+plot(blgrconn,
+     col="white",
+     #col=rev(blgr.cols(11)),
+     xlim=c(17.66,18.52),ylim=c(59.1,59.5),main="Species Evenness",
+     xlab="Longitude",ylab="Latitude")
+addnortharrow("bottomright",scale=0.58,padin=c(0.25,0.15))
+addscalebar(plotunit="km",plotepsg=4326,label.cex=1)
+points(xy, pch=21, col="black", bg=col2.envclust[envclust], lwd=2, cex=J*2.75)
+
+
+
+
