@@ -79,8 +79,8 @@ conn.long <- conn.data %>%
   pivot_longer(-Class, names_to = "variables", values_to = "value")
 
 conn.long %>%
-  group_by(variables, Class) %>%
-  summarise(
+  dplyr::group_by(variables, Class) %>%
+  dplyr::summarise(
     n = n(),
     mean = mean(value),
     sd = sd(value)
