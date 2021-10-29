@@ -24,7 +24,7 @@ set.seed(27319562)
 
 #setwd("~/Data")
 data <- "https://raw.githubusercontent.com/chazhyseni/pond_conn/master/Data/"
-output <- "https://raw.githubusercontent.com/chazhyseni/pond_conn/master/Output/"
+output <- "https://raw.githubusercontent.com/chazhyseni/pond_conn/master/Data/CircuitscapeOutput/"
 
 ####coordinates#### 
 xy <- read.csv(paste0(data,"Coordinates.csv"),header=T)

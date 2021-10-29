@@ -21,3 +21,18 @@ source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/dbRDA.R"
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Diversity_Differentiation.R");
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Connectivity_Biodiversity.R");
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Maps.R")
+
+
+To run Circuitscape:
+
+cd ~
+git clone https://github.com/chazhyseni/pond_conn
+cd pond_conn
+
+Then, in Julia:
+
+using Pkg
+Pkg.add("Circuitscape")
+compute("Circuitscape/Blue/Input/Blue_CS_parameters.ini")
+compute("Circuitscape/BlueGreen/Input/BlueGreen_CS_parameters.ini")
+compute("Circuitscape/Green/Input/Green_CS_parameters.ini")
