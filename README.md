@@ -23,11 +23,13 @@ source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Connecti
 source("https://raw.githubusercontent.com/chazhyseni/pond_conn/master/R/Maps.R")
 
 
+
 To run Circuitscape:
 
 cd ~
 git clone https://github.com/chazhyseni/pond_conn
 cd pond_conn
+
 
 Then, in Julia:
 
